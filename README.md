@@ -26,3 +26,9 @@ This pre-defined template creates a Virtual Private Cloud (VPC) on AWS with publ
 9. Click "Create stack".
    
 *It may take a few minutes to complete (you can monitor the progress in the CloudFormation console).*
+
+## Outputs
+- VPC ID
+- Public subnet ID
+- Private subnet IDs
+- Security group IDs
