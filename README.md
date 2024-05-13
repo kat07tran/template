@@ -9,3 +9,9 @@ This pre-defined template creates a Virtual Private Cloud (VPC) on AWS with publ
 - **Private Subnets:** Creates two private subnets within the VPC with CIDR blocks.
 - **Route Table:** Creates a route table to allow control of traffic within the VPC and associates it with the public subnet.
 - **Security Groups:**: Creates security groups for web servers, HTTPS traffic, and database access.
+
+## How to use the template?
+
+### Prerequisites:
+- **AWS account**: You need to create a AWS account to create a VPC.
+  
