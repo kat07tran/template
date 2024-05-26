@@ -32,4 +32,4 @@ This package contains four (4) AWS CloudFormation templates for deploying VPCs, 
    - Click "Next".
    - Click "Create stack".
 
-*It may take a few minutes to complete (you can monitor the progress in the CloudFormation console).*
+*It may take a few minutes to complete (you can monitor the progress in the CloudFormation console). Once the deployment is complete, you can access the deployed resources on the AWS platform.*
