@@ -1,34 +1,34 @@
-# CloudFormation pre-defined template for creating VPC with public and private subnets
+# User documentation
 
-This pre-defined template creates a Virtual Private Cloud (VPC) on AWS with public and private subnets and sets up an Internet gateway, route table, and security groups within the VPC.
+## Package overview:
+This package contains four (4) AWS CloudFormation templates for deploying VPCs, EC2 instances, RDS databases, and associating Elastic IPs on the Amazon Web Services (AWS) platform.
 
-## Resources
-- **VPC:** Creates a Virtual Private Cloud (VPC) with the CIDR block.
-- **Internet Gateway:** Creates an Internet Gateway to allow communication between VPC and internet and attaches it to the VPC.
-- **Public Subnet:** Creates a public subnet within the VPC with the CIDR block.
-- **Private Subnets:** Creates two private subnets within the VPC with CIDR blocks.
-- **Route Table:** Creates a route table to allow control of traffic within the VPC and associates it with the public subnet.
-- **Security Groups:**: Creates security groups for web servers, HTTPS traffic, and database access.
-
-## How to use the template?
+## How to use this package?
 ### Prerequisites:
-- **AWS account**: You need to create a AWS account to create a VPC.
+- **AWS account**: You need to create a AWS account to deploy the package templates.
   
-## Steps to deploy
-1. Download this template from the repository.
-2. Log in to the AWS Management Console.
-3. Navigate to the CloudFormation service.
-4. Click on "Create stack" and select "With new resources (standard)".
-5. Choose "Upload a template file" and upload the template.
-6. Click "Next".
-7. Provide a stack name and customise parameters (if needed).
-8. Click "Next".
-9. Click "Create stack".
-   
-*It may take a few minutes to complete (you can monitor the progress in the CloudFormation console).*
+### Please follow this deployment order: 
+1. VPC
+2. Elastic IP
+3. RDS database
+4. EC2 instance
 
-## Outputs
-- VPC ID
-- Public subnet ID
-- Private subnet IDs
-- Security group IDs
+## Steps to run the containerised application:
+
+1. **Select the CloudFormation template with the resource you want to deploy:**
+   - create_vpc_template.yaml: Creates a VPC with public and private subnets, along with security groups
+   - create_eip_template.yaml: Creates an Elastic IP
+   - create_rds_template.yaml: Creates an RDS database with MySQL
+   - create_ec2_template.yaml: Creates an EC2 instance within the VPC and attaches it to the Elastic IP
+
+2. **Deploy the selected template:**
+   - Download this template from the repository.
+   - Log in to the AWS Management Console.
+   - Navigate to the CloudFormation service.
+   - Click on "Create stack" and select "With new resources (standard)".
+   - Choose "Upload a template file" and upload the template.
+   - Click "Next".
+   - Provide a stack name and customise parameters (if needed).
+   - Click "Next".
+   - Click "Create stack".
+*It may take a few minutes to complete (you can monitor the progress in the CloudFormation console).*
